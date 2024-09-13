@@ -1,0 +1,29 @@
+/*
+.n-panel : 제목이 없는 그냥 판때기
+.n-frame : 제목이나 상태바를 가지는 판때기
+*/
+
+
+.card-list{
+    display: flex;
+    
+    flex-wrap: wrap;
+    /* width: 1200px; */
+}
+
+.n-panel{
+    width: 100%;
+    border: 1px solid var(--color-base-3);
+    padding: var(--gap-4);
+    flex-shrink: 0;
+}
+
+@media (1200px <= width) {
+    /* .card-list{
+        width: 1200px;
+    }
+     */
+     .n-panel{
+        width:50%;
+     }
+}

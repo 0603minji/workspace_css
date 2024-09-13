@@ -1,0 +1,104 @@
+
+
+
+.n-form{
+        /* 
+        invalid / valid : required에 대해 적용됨
+
+        required : 입력이 되어있기를 요구함
+                    입력되어있지 않았으면 -> 유효하지 않음 (invalid)
+                    입력되었으면 -> 유효함 (valid)
+        */    
+    input[type=text]:invalid{
+        background-color: red;
+    }
+
+
+
+    /*
+    placeholder : 입력 전에도 입력창에 기본으로 있는 문구
+
+    required 속성을 가진 요소에대해
+    invalid이고 (입력 요구되지만 유효하지 않고)
+    placeholder가 보이고있지 않으면 not (기본문구 보이지 않으면)
+    */
+    input[type=text]:invalid:not(:placeholder-shown){
+        background-color: rgb(88, 152, 103);
+
+    }
+
+
+    /*
+    required 속성을 가진 요소에대해
+    valid이고 (입력 요구되지만 유효하고)
+    placeholder가 보이고있지 않으면 not (기본문구 보이지 않으면)
+    */
+    input[type=text]:valid:not(:placeholder-shown){
+        background-color: rgb(88, 152, 103);
+
+    }
+
+    input[type=text]:focus-within{
+        border-bottom: 3px solid salmon;
+    }
+
+    label:has(>input[type=text]:invalid:not(:placeholder-shown))::after{
+        content : "WRONG!"
+    }
+
+    /*
+    invalid : required가 있고 입력되어있지않고
+
+    not(placehorder-shown) : 입력된것 없지만 placeholder가 보이지 않고
+    */
+    label:has(>input[type=text]:invalid:not(:placeholder-shown))::after{
+        content: "";
+        display: inline-flex;
+        width: 24px;
+        height: 24px;
+        mask: url(/images/icon/radio_button_unchecked.svg) no-repeat center;
+        background-color: red;
+    }
+    
+    /*
+    valid : required가 없고
+
+    not(placehorder-shown) : 입력된것 없지만 placeholder가 보이지 않고
+    */
+    label:has(>input[type=text]:valid:not(:placeholder-shown))::after{
+        content: "";
+        display: inline-flex;
+        width: 24px;
+        height: 24px;
+        mask: url(/images/icon/task_alt.svg) no-repeat center;
+        background-color: rgb(88, 152, 103);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+        
+
+    label{
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        width: 300px;
+        flex-wrap: wrap;
+    }
+
+    label>:first-child{
+        width: 100%;
+    }
+
+    /* label>span{
+        width: 80px;
+    } */
+
+    /* label>input{
+        flex-grow: 1;
+    } */
+
+    
+
+}
+

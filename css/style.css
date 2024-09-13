@@ -1,0 +1,71 @@
+/* @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"); */
+
+
+/* @font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+} */
+
+body{
+  font-family:'Pretendard';
+  font-size: 15px;
+}
+
+:root{
+  --icon-color:#D86259;
+  --icon-color:#905634;
+  --icon-color:#f9a9a3;
+
+  --color-bg-header: #161616;
+  --color-bg-footer: #3a3a3a;
+  --color-bg-3: #181614;
+  --color-bg-2: #ececec;
+  --color-bg-1: #e4e4e4;
+
+  --color-fg-3: #5e2808;
+  --color-fg-2: #944813;
+  --color-fg-1: #d48700;
+  --color-fg-strong: #334dcf;
+
+  --color-text-7: #575757;
+  --color-text-6: #959595;
+  --color-text-5: #c1c1c1;
+  --color-text-4: #e2e2e2;
+  --color-text-3: #f1f1f1;
+  --color-text-2: #f2f3f4;
+  --color-text-1: #ffffff;
+
+  /* 변수이름 고치기 */
+  --color-text-invert: #fff;
+  --color-text: #000000;
+
+    /* violet */
+    --color-violet-1: #f2f0ff;
+
+  /* --color-bg-header: #161616;
+  --color-bg-footer: #3a3a3a;
+  --color-bg-modal: #ececec;
+  --color-bg-recommend: #e4e4e4;
+  --color-bg-light-2:
+  --color-bg-light-1: #ececec;
+  --color-bg-dark: #181614; */
+
+  /*폰트 사이즈*/
+  --font-size-title1-mobile: 22px;
+  --font-size-title2-mobile: 18px;
+  --font-size-title3-mobile: 16px;
+  --font-size-normal-mobile: 14px;
+  --font-size-normal2-mobile: 12px;
+  --font-size-title1-pc: 24px;
+  --font-size-title2-pc: 20px;
+  --font-size-title3-pc: 18px;
+  --font-size-normal-pc: 16px;
+  --font-size-normal2-pc: 14px;
+}
+
+
+.n-icon{
+  --icon-color:var(--color-fg-1);
+}

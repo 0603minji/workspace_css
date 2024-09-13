@@ -1,0 +1,31 @@
+.display\:inline {
+    display: inline !important;
+}
+
+.display\:inline-block {
+    display: inline-block !important;
+}
+
+.display\:flex {
+    display: flex !important;
+}
+
+.width\:1 {
+    width: var(--width-1) !important;
+}
+
+.width\:2 {
+    width: var(--width-2) !important;
+}
+
+.width\:3 {
+    width: var(--width-3) !important;
+}
+
+.width\:4 {
+    width: var(--width-4) !important;
+}
+
+.width\:ex {
+    width: 0 !important;
+}

@@ -1,0 +1,152 @@
+ :where(
+    .n-icon\:home,
+    .n-icon\:dashboard,
+    .n-icon\:login,
+    .n-icon\:logout
+){
+    --icon-color-1:#D86259;
+    --icon-color-2:#905634;
+    --icon-color-3:#f9a9a3;
+    --icon-color-4: #3598c3;
+    --color-base-1: #3598c5;
+    --icon-width:24px;
+    --icon-color: #3598c3;
+    --color-base-3: #3598c5;
+    /* --deco-gap : 5px; */
+    display: inline-flex;
+    width: var(--icon-width);
+    height: var(--icon-width);
+    overflow: hidden;
+    /* text-indent: -999px; */
+    /*mask-size: var(--icon-width);*/
+    /*mask-repeat: no-repeat;*/
+    align-items: center;
+    gap: var(--deco-gap);
+}
+:where(
+    .n-icon\:home,
+    .n-icon\:dashboard,
+    .n-icon\:login,
+    .n-icon\:logout
+)::before{
+    flex-shrink: 0;
+    content: "";
+    display: inline-flex;
+    width: var(--icon-width);
+    height: var(--icon-width);
+    overflow: hidden;
+    mask-size: var(--icon-width);
+    mask-repeat: no-repeat;
+    background-color: var(--icon-color);
+    /*background-size: var(--icon-width);*/
+    /*background-repeat: no-repeat;*/
+}
+
+/* .n-icon\:home{*/
+/*    flex-direction: column;*/
+/*    height: auto;*/
+/*}*/
+
+.n-icon\:home::before{
+    /* background-image: url("/images/icon/home.svg"); */
+    mask-image: url("/images/icon/home.svg");
+}
+
+.n-icon\:dashboard::before{
+    /* background-image: url("/images/icon/dashboard.svg"); */
+    mask-image: url("/images/icon/dashboard.svg");
+}
+
+.n-icon\:login::before{
+    /* background-image: url("/images/icon/login.svg"); */
+    mask-image: url("/images/icon/login.svg");
+}
+
+.n-icon\:logout::before{
+    /* background-image: url("/images/icon/logout.svg"); */
+    mask-image: url("/images/icon/logout.svg");
+
+}
+
+
+/*============== size settings ================*/
+
+.n-icon-size\:1,
+.n-icon-size\:small{
+    --icon-width:16px;
+}
+
+.n-icon-size\:2,
+.n-icon-size\:medium{
+    --icon-width:24px;
+}
+
+.n-icon-size\:3,
+.n-icon-size\:large{
+    --icon-width:32px;
+}
+
+/* =================== color settings ====================== */
+
+.n-icon-color\:main-1{
+    --icon-color:var(--icon-color-1, #D86259);
+}
+
+.n-icon-color\:main-2{
+    --icon-color:var(--icon-color-2,#905634);
+}
+
+.n-icon-color\:main-3{
+    --icon-color:var(--icon-color-3,#f9a9a3);
+}
+
+
+.n-icon-color\:sub-1{
+    --icon-color: var(--icon-color-4, #93aa76);
+}
+
+.n-deco{
+    width: auto;
+}
+
+.n-deco-gap\:1{
+    --deco-gap:5px;
+}
+
+.n-deco-gap\:2{
+    --deco-gap:10px;
+}
+
+.n-deco-pos\:top,
+.n-deco-pos\:bottom{
+    flex-direction: column;
+    height: auto;
+}
+.n-deco-pos\:left::before,
+.n-deco-pos\:top::before{
+    /* order:initial; */
+    order:unset;
+}
+
+.n-deco-pos\:right::before,
+.n-deco-pos\:bottom::before{
+    order:1;
+}
+
+/* .n-deco-pos\:right,
+.n-deco-pos\:left{
+    flex-direction: row;
+    height: auto;
+} */
+
+
+.n-btn{
+    border: 1px solid var(--icon-color-1, black);
+    padding: 0px 5px;
+    border-radius: 10px;
+    display: inline-flex;
+}
+
+.n-btn.n-icon\:home{
+    text-indent: -999px;
+}
